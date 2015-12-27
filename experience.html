@@ -3,7 +3,7 @@
       <head>
     <link rel="icon" href="https://cloud.githubusercontent.com/assets/16332983/11928316/4789db4c-a787-11e5-9751-cb97b6cc1d85.jpg">
                        
-                        <h2><font size=18px; color=rgb(422,623,124,567);> <center> Yusuf Hamid </center> </font></h2>
+                        <h2><font size=18px; color=rgb(422,623,124,567);> <center><div id="myDIV"> Yusuf Hamid </div> </center> </font></h2>
 
       </head>
    
@@ -14,7 +14,23 @@
            /* background-image: url("https://cloud.githubusercontent.com/assets/16332983/11947405/0ece07ee-a81b-11e5-89f2-b3a794b8f8a3.jpg");*/
             background-color: #cccccc;
             }
+#myDIV {
+    border: 1px solid black;
+    width: 400px;
+    height: 100px;
+    -webkit-animation: mymove 5s infinite; /* Chrome, Safari, Opera */
+    animation: mymove 5s infinite;
+}
 
+/* Chrome, Safari, Opera */
+@-webkit-keyframes mymove {
+    50% {font: 40px bold;}
+}
+
+/* Standard syntax */
+@keyframes mymove {
+    50% {font: 40px bold;}
+}
    </style> 
 
 
@@ -32,7 +48,7 @@
             </center>
       </nav>
   
-
+kkk
             
 
 </body>
