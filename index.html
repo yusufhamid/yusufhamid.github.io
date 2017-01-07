@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html>
 <title>Yusuf Hamid Web</title>
 <head>
@@ -7,12 +6,11 @@
 <script>
 
 function postContactToGoogle() {
-var Name=$('#name').val();
-var Email=$('#email').val();
-var Message=$('#message').val();
-
+var Name=$('#Name').val();
+var Email=$('#Email').val();
+var Message=$('#Message').val();
 $.ajax({
-url:"https://docs.google.com/forms/d/e/1FAIpQLSemL1LEqvI4MJRJEVVp2eF2WstKNS98T5jYlVt_kZyjbqB5fQ/formResponse",data:{"entry_1937812936":name,"entry_78769895":email,"entry_501949288":message},type:"POST",dataType:"xml",statusCode: {0:function() { window.location.replace("http://htmlpreview.github.io/?https://github.com/project3601/appleproject360.github.io/blob/master/Thankyou");},200:function(){window.location.replace("http://htmlpreview.github.io/?https://github.com/project3601/appleproject360.github.io/blob/master/Thankyou");}}
+url:"https://docs.google.com/forms/d/e/1FAIpQLSemL1LEqvI4MJRJEVVp2eF2WstKNS98T5jYlVt_kZyjbqB5fQ/formResponse",data:{"entry_1937812936":Name,"entry_78769895":Email,"entry_501949288":Message},type:"POST",dataType:"xml",statusCode: {0:function() { window.location.replace("http://htmlpreview.github.io/?https://github.com/project3601/appleproject360.github.io/blob/master/Thankyou");},200:function(){window.location.replace("http://htmlpreview.github.io/?https://github.com/project3601/appleproject360.github.io/blob/master/Thankyou");}}
 });
 }
 
@@ -229,7 +227,7 @@ body, html {
 	              <input class="w3-input w3-border" type="text" id="Message" placeholder="Message" required name="Message">
 
 	<button class="w3-btn w3-black w3-right w3-padding w3-section" type="submit" onclick="postContactToGoogle()">
-          <i class="fa fa-paper-plane"></i> SEND MESSAGEs
+          <i class="fa fa-paper-plane"></i> SEND MESSAGE
         </button>
         
       </form> 
