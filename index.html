@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
 <title>Yusuf Hamid Web</title>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js">
+</script>
 <meta charset="UTF-8">
 <link rel="icon" href="https://cloud.githubusercontent.com/assets/16332983/11928316/4789db4c-a787-11e5-9751-cb97b6cc1d85.jpg">
 <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
@@ -58,7 +61,22 @@ body, html {
     }
 }
 </style>
-<body>
+
+<script>
+
+function postContactToGoogle() {
+var Name=$('#name').val();
+var Email=$('#email').val();
+var Message=$('#message').val();
+
+$.ajax({
+url:"https://docs.google.com/a/uw.edu/forms/d/e/1FAIpQLSfn-0aU6rZZRmPgQ7VcL7U4FLAVmypWrU9SuGku9SxxSschBw/viewform",data:{"entry_829473997":name,"entry_942397836":email,"entry_1210589240":message},type:"POST",dataType:"xml",statusCode: {0:function() { window.location.replace("http://htmlpreview.github.io/?https://github.com/project3601/appleproject360.github.io/blob/master/Thankyou");},200:function(){window.location.replace("http://htmlpreview.github.io/?https://github.com/project3601/appleproject360.github.io/blob/master/Thankyou");}}
+});
+}
+
+</script>
+</head>
+<body> 
 
 <!-- Navbar (sit on top) -->
 <div class="w3-top">
@@ -87,7 +105,7 @@ body, html {
 
 <!-- First Parallax Image with Logo Text -->
 <div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
-  <div class="w3-display-middle" style="white-space:nowrap;">
+  <div class="w3-display-right" style="white-space:nowrap;">
     <span class="w3-center w3-padding-xlarge w3-black w3-xlarge w3-wide w3-animate-opacity">Yusuf<span class="w3-hide-small"> Hamid</span> WEBSITE</span>
   </div>
 </div>
@@ -100,7 +118,7 @@ body, html {
   <div class="w3-row">
     <div class="w3-col m6 w3-center w3-padding-large">
       <p><b><i class="fa fa-user w3-margin-right"></i>My Name</b></p><br>
-      <img src="https://cloud.githubusercontent.com/assets/16332983/11928316/4789db4c-a787-11e5-9751-cb97b6cc1d85.jpg" class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="Photo of Me" width="500" height="333">
+  <!--    <img src="https://cloud.githubusercontent.com/assets/16332983/11928316/4789db4c-a787-11e5-9751-cb97b6cc1d85.jpg" class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="Photo of Me" width="500" height="333"> -->
     </div>
 
     <!-- Hide this text on small devices -->
@@ -149,7 +167,16 @@ body, html {
      
      	<a href="https://github.com/yusufhamid?tab=repositories" target="_blank">
     <button class="w3-btn w3-light-grey w3-padding-xlarge" style="margin-top:64px">Click in here</button></a><br>
-  </div>
+	
+	<!-- Fourth portfolio -->
+  <p class="w3-center"><em>See some of my hackathon video and images<br> Click on the link below</em></p>
+
+	<blockquote class="twitter-video" data-lang="en"><p lang="en" dir="ltr"></p><a href="https://twitter.com/cattron313/status/712832602957164545" target="_blank"></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+	<button class="w3-btn w3-light-grey w3-padding-xlarge" style="margin-top:64px">Short Video</button></a><br>
+
+ </div>
 </div>
 
 
@@ -174,31 +201,37 @@ body, html {
       <div class="w3-large w3-margin-bottom">
       
       <div class="w3-xlarge w3-section">
-    <i class="fa fa-facebook-official w3-hover-text-indigo"></i>
-    <i class="fa fa-twitter w3-hover-text-light-blue"></i>
-    <i class="fa fa-linkedin w3-hover-text-indigo"></i>
-	<i class="fa fa-github w3-hover-text-indigo"></i>
+	<a href="https://www.facebook.com/yusuf.mhamid" target="_blank">
+    <i class="fa fa-facebook-official w3-hover-text-indigo"></i></a>
+	<a href="https://twitter.com/yusufmhamid" target="_blank">
+    <i class="fa fa-twitter w3-hover-text-light-blue"></i></a>
+	<a href="https://www.linkedin.com/in/yusufmh" target="_blank">
+    <i class="fa fa-linkedin w3-hover-text-indigo"></i></a>
+	<a href="https://github.com/yusufhamid" target="_blank">
+	<i class="fa fa-github w3-hover-text-indigo"></i></a>
 
   </div>
-        <i class="fa fa-map-marker"></i> Seattle,, US<br>
+        <i class="fa fa-map-marker"></i> Seattle, US<br>
        
        
       </div>
 
-	    <form action="https://formspree.io/ymhm444@gmail.com" method="post">
+      <form action="form.asp" target="blank">
         <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
           <div class="w3-half">
-            <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
+            <input class="w3-input w3-border" type="text" id="Name" placeholder="Name" required name="Name">
           </div>
           <div class="w3-half">
-            <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
+            <input class="w3-input w3-border" type="text" id="Email" placeholder="Email" required name="Email">
           </div>
         </div>
-        <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
-        <button class="w3-btn w3-black w3-right w3-padding w3-section" type="submit">
+        <input class="w3-input w3-border" type="text" id="Message" placeholder="Message" required name="Message">
+
+        <button class="w3-btn w3-black w3-right w3-padding w3-section" type="submit" onclick="postContactToGoogle()">
           <i class="fa fa-paper-plane"></i> SEND MESSAGE
         </button>
-      </form>
+      </form> 
+	
     </div>
   </div>
 </div>
@@ -208,10 +241,14 @@ body, html {
 <footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
   <a href="#home" class="w3-btn w3-padding w3-light-grey w3-hover-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
   <div class="w3-xlarge w3-section">
-    <i class="fa fa-facebook-official w3-hover-text-indigo"></i>
-    <i class="fa fa-twitter w3-hover-text-light-blue"></i>
-    <i class="fa fa-linkedin w3-hover-text-indigo"></i>
-	<i class="fa fa-github w3-hover-text-indigo"></i>
+    <a href="https://www.facebook.com/yusuf.mhamid" target="_blank">
+    <i class="fa fa-facebook-official w3-hover-text-indigo"></i></a>
+	<a href="https://twitter.com/yusufmhamid" target="_blank">
+    <i class="fa fa-twitter w3-hover-text-light-blue"></i></a>
+	<a href="https://www.linkedin.com/in/yusufmh" target="_blank">
+    <i class="fa fa-linkedin w3-hover-text-indigo"></i></a>
+	<a href="https://github.com/yusufhamid" target="_blank">
+	<i class="fa fa-github w3-hover-text-indigo"></i></a>
 
   </div>
   <p>All right reserved. 2016</p>
@@ -243,3 +280,5 @@ function toggleFunction() {
 
 </body>
 </html>
+
+
