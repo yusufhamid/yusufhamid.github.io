@@ -10,7 +10,7 @@ var Name=$('#Name').val();
 var Email=$('#Email').val();
 var Message=$('#Message').val();
 $.ajax({
-url:"https://docs.google.com/forms/d/e/1FAIpQLSemL1LEqvI4MJRJEVVp2eF2WstKNS98T5jYlVt_kZyjbqB5fQ/formResponse",data:{"entry_1937812936":Name,"entry_78769895":Email,"entry_501949288":Message},type:"POST",dataType:"xml",statusCode: {0:function() { window.location.replace("http://htmlpreview.github.io/?https://github.com/project3601/appleproject360.github.io/blob/master/Thankyou");},200:function(){window.location.replace("http://htmlpreview.github.io/?https://github.com/project3601/appleproject360.github.io/blob/master/Thankyou");}}
+url:"https://docs.google.com/forms/d/e/1FAIpQLSemL1LEqvI4MJRJEVVp2eF2WstKNS98T5jYlVt_kZyjbqB5fQ/formResponse",data:{"entry_1937812936":Name,"entry_78769895":Email,"entry_501949288":Message},type:"POST",dataType:"xml",statusCode: {0:function() { window.location.replace("http://google.com");},200:function(){window.location.replace("http://google.com");}}
 });
 }
 
@@ -228,7 +228,7 @@ body, html {
 	<a href="https://www.linkedin.com/in/yusufmh" target="_blank">
 
 	<button class="w3-btn w3-black w3-right w3-padding w3-section" type="submit" onclick="postContactToGoogle()">
-          <i class="fa fa-paper-plane"></i> SEND MESSAGEs
+          <i class="fa fa-paper-plane"></i> SEND MESSAGE
 		</button> </a>
         
       </form> 
