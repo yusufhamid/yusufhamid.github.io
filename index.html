@@ -70,7 +70,7 @@ var Email=$('#email').val();
 var Message=$('#message').val();
 
 $.ajax({
-url:"https://docs.google.com/a/uw.edu/forms/d/e/1FAIpQLSfn-0aU6rZZRmPgQ7VcL7U4FLAVmypWrU9SuGku9SxxSschBw/viewform",data:{"entry_829473997":name,"entry_942397836":email,"entry_1210589240":message},type:"POST",dataType:"xml",statusCode: {0:function() { window.location.replace("http://htmlpreview.github.io/?https://github.com/project3601/appleproject360.github.io/blob/master/Thankyou");},200:function(){window.location.replace("http://htmlpreview.github.io/?https://github.com/project3601/appleproject360.github.io/blob/master/Thankyou");}}
+url:"https://docs.google.com/a/uw.edu/forms/d/e/1FAIpQLSfn-0aU6rZZRmPgQ7VcL7U4FLAVmypWrU9SuGku9SxxSschBw/formResponse",data:{"entry_829473997":name,"entry_942397836":email,"entry_1210589240":message},type:"POST",dataType:"xml",statusCode: {0:function() { window.location.replace("http://htmlpreview.github.io/?https://github.com/project3601/appleproject360.github.io/blob/master/Thankyou");},200:function(){window.location.replace("http://htmlpreview.github.io/?https://github.com/project3601/appleproject360.github.io/blob/master/Thankyou");}}
 });
 }
 
@@ -228,7 +228,7 @@ url:"https://docs.google.com/a/uw.edu/forms/d/e/1FAIpQLSfn-0aU6rZZRmPgQ7VcL7U4FL
         <input class="w3-input w3-border" type="text" id="Message" placeholder="Message" required name="Message">
 
         <button class="w3-btn w3-black w3-right w3-padding w3-section" type="submit" onclick="postContactToGoogle()">
-          <i class="fa fa-paper-plane"></i> SEND MESSAGE
+          <i class="fa fa-paper-plane"></i> SENDs MESSAGE
         </button>
       </form> 
 	
