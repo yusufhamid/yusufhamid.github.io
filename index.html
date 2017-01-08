@@ -1,10 +1,11 @@
+<!DOCTYPE html>
+
 <html>
 <title>Yusuf Hamid Web</title>
 <head>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js">
 </script>
 <script>
-
 function postContactToGoogle() {
 var Name=$('#Name').val();
 var Email=$('#Email').val();
@@ -13,7 +14,6 @@ $.ajax({
 url:"https://docs.google.com/forms/d/e/1FAIpQLSemL1LEqvI4MJRJEVVp2eF2WstKNS98T5jYlVt_kZyjbqB5fQ/formResponse",data:{"entry_1937812936":Name,"entry_78769895":Email,"entry_501949288":Message},type:"POST",dataType:"xml",statusCode: {0:function() { window.location.replace("http://google.com");},200:function(){window.location.replace("http://google.com");}}
 });
 }
-
 </script>
 </head>
 <meta charset="UTF-8">
@@ -24,8 +24,6 @@ url:"https://docs.google.com/forms/d/e/1FAIpQLSemL1LEqvI4MJRJEVVp2eF2WstKNS98T5j
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
-
-
  body {
           
            background-color: #3F3D3D;
@@ -36,7 +34,6 @@ body, html {
     color: #EAE8E7;
     line-height: 1.8;
 }
-
 /* Create a Parallax Effect */
 .bgimg-1, .bgimg-2, .bgimg-3 {
     background-attachment: fixed;
@@ -44,28 +41,23 @@ body, html {
     background-repeat: no-repeat;
     background-size: cover;
 }
-
 /* First image (Logo. Full height) */
 .bgimg-1 {
     background-image: url('https://cloud.githubusercontent.com/assets/16332983/21291546/7774a66e-c498-11e6-914f-4fcbb8528931.jpg');
     min-height: 100%;
 }
-
 /* Second image (Portfolio) */
 .bgimg-2 {
     background-image: url("https://cloud.githubusercontent.com/assets/16332983/21303743/7451ba7a-c575-11e6-97cf-12bc72bd6f46.jpg");
     min-height: 400px;
 }
-
 /* Third image (Contact) */
 .bgimg-3 {
     background-image: url("https://cloud.githubusercontent.com/assets/16332983/21303959/e412f472-c576-11e6-8fbb-7fb7c4355d2a.jpg");
     min-height: 400px;
 }
-
 .w3-wide {letter-spacing: 10px;}
 .w3-hover-opacity {cursor: pointer;}
-
 /* Turn off parallax scrolling for tablets and phones */
 @media only screen and (max-device-width: 1024px) {
     .bgimg-1, .bgimg-2, .bgimg-3 {
@@ -142,16 +134,18 @@ body, html {
   <h3 class="w3-center">MY WORK</h3>
   
   	<!-- First portfolio -->
-  <p class="w3-center"><em>Here are some of my latest lorem work ipsum tipsum.<br> Click on the images to make them bigger</em></p>
+  <p class="w3-center"><em>/*-----------------------------------------------------------*/<br> print("NASA Project")<br> 
+  At NASA Stennis Space Center, I performed role of Operation and Software Engineer for Mars rover competition</em></p>
 
   <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
   <div class="w3-row-padding w3-center">
      
      	<a href="https://docs.google.com/a/uw.edu/presentation/d/1QZ4xC8QxMGrJShQ6Bf5B-rJYBLEe0gb5cNfuyeB-1es/htmlpresent" target="_blank">
-    <button class="w3-btn w3-light-grey w3-padding-xlarge" style="margin-top:64px">Click in here</button></a><br>
+    <button class="w3-btn w3-light-grey w3-padding-xlarge" style="margin-top:64px">Click here</button></a><br>
 	
 	<!-- Second portfolio -->
-	<p class="w3-center"><em>Here are some of my latest lorem work ipsum tipsum.<br> Click on the link to view</em></p>
+	<p class="w3-center"><em>/*-----------------------------------------------------------*/<br> print("System Analysis & Design class project")<br>
+	For System Analysis & Design final project, with four students we created a website</em></p>
      
      
      	<a href="https://docs.google.com/a/uw.edu/presentation/d/1XkCo6zBCsPE_vIKDuoOvq1AGz5MGEnmStTbQGyVgeAI/htmlpresent" target="_blank">
@@ -161,14 +155,16 @@ body, html {
     <button class="w3-btn w3-light-grey w3-padding-xlarge" style="margin-top:64px">Portfolio</button></a>
 	
 		<!-- Third portfolio -->
-  <p class="w3-center"><em>See some of my coding projects on my Github repository<br> Click on the link below</em></p>
+  <p class="w3-center"><em>/*-----------------------------------------------------------*/<br>print("my Code on Github")<br>
+  See some of my coding projects on my Github repository<br> Click on the link below</em></p>
 
      
      	<a href="https://github.com/yusufhamid?tab=repositories" target="_blank">
     <button class="w3-btn w3-light-grey w3-padding-xlarge" style="margin-top:64px">Click in here</button></a><br>
 	
 	<!-- Fourth portfolio -->
-  <p class="w3-center"><em>See some of my hackathon video and images<br> Click on the link below</em></p>
+  <p class="w3-center"><em>/*-----------------------------------------------------------*/<br>print("Hackathon at Box")<br>
+  See some of my hackathon video and images<br> Click on the link below</em></p>
 
 	<blockquote class="twitter-video" data-lang="en"><p lang="en" dir="ltr"></p><a href="https://twitter.com/cattron313/status/712832602957164545" target="_blank"></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
@@ -267,7 +263,6 @@ function myFunction() {
         navbar.className = navbar.className.replace(" w3-card-2 w3-animate-top w3-white", "");
     }
 }
-
 // Used to toggle the menu on small screens when clicking on the menu button
 function toggleFunction() {
     var x = document.getElementById("navDemo");
@@ -281,5 +276,3 @@ function toggleFunction() {
 
 </body>
 </html>
-
-
